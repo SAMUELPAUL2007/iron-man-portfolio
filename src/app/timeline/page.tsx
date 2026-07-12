@@ -42,10 +42,10 @@ export default function TimelinePage() {
             <Sparkles className="mr-1.5 h-3 w-3" />
             History
           </Badge>
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
             Iron Man <span className="gradient-text-iron">Timeline</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-400">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
             From 1963 to today — trace the evolution of Iron Man through comics, films, television, and games.
           </p>
         </FadeIn>

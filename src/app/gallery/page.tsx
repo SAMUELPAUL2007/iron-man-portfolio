@@ -52,10 +52,10 @@ export default function GalleryPage() {
             <ImageIcon className="mr-1.5 h-3 w-3" />
             Visuals
           </Badge>
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
             Visual <span className="gradient-text-iron">Gallery</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-400">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
             A cinematic collection of Iron Man imagery spanning suits, technology, films, and behind-the-scenes moments.
           </p>
         </FadeIn>

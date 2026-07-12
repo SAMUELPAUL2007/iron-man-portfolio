@@ -42,10 +42,10 @@ export default function AboutPage() {
       <Section className="pt-32">
         <FadeIn>
           <Badge variant="arc" className="mb-4">About</Badge>
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
             Tony <span className="gradient-text-iron">Stark</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-400">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
             Visionary. Inventor. Hero. The man who turned shrapnel into salvation and built a legacy from scrap metal and sheer will.
           </p>
         </FadeIn>

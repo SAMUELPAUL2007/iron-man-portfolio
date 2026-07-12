@@ -42,7 +42,7 @@ const suits = [
 
 function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16">
+    <section className="relative flex min-h-dvh items-center justify-center overflow-hidden pt-16">
       <FlyingIronMan />
       <HUDOverlay />
       <IronParticleField count={150} />
@@ -62,12 +62,12 @@ function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="mx-auto mb-8 flex h-32 w-32 items-center justify-center rounded-full border-2 border-iron-arc/20 bg-iron-arc/5"
+          className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-iron-arc/20 bg-iron-arc/5 sm:mb-8 sm:h-32 sm:w-32"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.3 }}
         >
-          <div className="relative flex h-24 w-24 items-center justify-center">
+          <div className="relative flex h-16 w-16 items-center justify-center sm:h-24 sm:w-24">
             <div className="absolute inset-0 rounded-full border-2 border-iron-arc/30 animate-ping" style={{ animationDuration: "3s" }} />
             <div className="absolute inset-2 rounded-full border border-iron-arc/20" />
             <span className="text-3xl font-black text-iron-arc">⚡</span>
@@ -75,7 +75,7 @@ function HeroSection() {
         </motion.div>
 
         <motion.h1
-          className="text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl"
+          className="text-4xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easing.standard, delay: 0.4 }}
@@ -85,7 +85,7 @@ function HeroSection() {
         </motion.h1>
 
         <motion.p
-          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-400 sm:text-xl"
+          className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:mt-6 sm:text-xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easing.standard, delay: 0.5 }}

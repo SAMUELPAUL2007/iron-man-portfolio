@@ -82,10 +82,10 @@ export default function SuitsPage() {
             <Sparkles className="mr-1.5 h-3 w-3" />
             Armor Collection
           </Badge>
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
             Iron Man <span className="gradient-text-iron">Armors</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-400">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
             Over 85 suits built across decades. Each one a refinement of the last — pushing the boundaries of what technology can achieve.
           </p>
         </FadeIn>

@@ -65,10 +65,10 @@ export default function TechnologyPage() {
       <Section className="pt-32">
         <FadeIn>
           <Badge variant="arc" className="mb-4">R&D</Badge>
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
             Stark <span className="gradient-text-iron">Technologies</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-400">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
             From clean energy to artificial intelligence — Tony Stark didn&apos;t just build suits. He rewrote the rules of what&apos;s possible.
           </p>
         </FadeIn>

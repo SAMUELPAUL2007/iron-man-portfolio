@@ -15,7 +15,7 @@ export default function NotFound() {
   return (
     <>
       <HUDOverlay />
-      <div className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
+      <div className="flex min-h-dvh flex-col items-center justify-center px-4 text-center">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}

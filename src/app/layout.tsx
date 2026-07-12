@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark`}
     >
-      <body className="min-h-screen bg-iron-dark text-neutral-50 antialiased">
+      <body className="min-h-dvh bg-iron-dark text-neutral-50 antialiased">
         <GlobalVideoBackground />
         <Navbar />
         <main id="main-content" className="flex-1">

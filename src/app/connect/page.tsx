@@ -37,10 +37,10 @@ export default function ConnectPage() {
       <Section className="pt-32">
         <FadeIn>
           <Badge variant="arc" className="mb-4">Connect</Badge>
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl">
             Get in <span className="gradient-text-iron">Touch</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-400">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
             Whether you have a business proposal, a tech idea, or just want to say hi — Jarvis is standing by.
           </p>
         </FadeIn>
