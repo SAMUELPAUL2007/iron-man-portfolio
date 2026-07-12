@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useEffect } from "react";
 import { Quote, Atom, GraduationCap, Heart, Building2, Award, Sword } from "lucide-react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { HolographicGrid } from "@/components/scene/holographic-grid";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card, CardIcon } from "@/components/ui/card";
@@ -33,7 +34,7 @@ const highlights = [
 
 export default function AboutPage() {
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-nano-tech.mp4", "blue", 0.2); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-nano-tech.mp4"), "blue", 0.2); }, [setVideo]);
   return (
     <>
       <HolographicGrid />
@@ -55,7 +56,7 @@ export default function AboutPage() {
           <FadeIn direction="left">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-iron-arc/10">
               <img
-                src="/images/suits/iron-man-armor.jpg"
+                src={assetUrl("/images/suits/iron-man-armor.jpg")}
                 alt="Iron Man"
                 className="absolute inset-0 h-full w-full object-cover"
               />

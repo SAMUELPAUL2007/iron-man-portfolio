@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Cpu, Zap, Shield, Radio, Atom, Satellite, Microscope, Gauge } from "lucide-react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { HUDOverlay } from "@/components/scene/hud-overlay";
 import { IronParticleField } from "@/components/scene/iron-particle-field";
 import { Section, SectionHeader } from "@/components/ui/section";
@@ -55,7 +56,7 @@ const tech = [
 
 export default function TechnologyPage() {
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-endgame-4k.mp4", "tech", 0.2); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-endgame-4k.mp4"), "tech", 0.2); }, [setVideo]);
   return (
     <>
       <HUDOverlay />

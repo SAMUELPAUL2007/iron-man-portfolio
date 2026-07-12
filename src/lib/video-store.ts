@@ -1,6 +1,7 @@
 "use client";
 
 import { create } from "zustand";
+import { assetUrl } from "./path";
 
 interface VideoState {
   src: string;
@@ -10,7 +11,7 @@ interface VideoState {
 }
 
 export const useVideoStore = create<VideoState>((set) => ({
-  src: "/videos/ironman-nano-tech.mp4",
+  src: assetUrl("/videos/ironman-nano-tech.mp4"),
   overlay: "ambient",
   opacity: 0.25,
   setVideo: (src, overlay = "ambient", opacity = 0.25) =>

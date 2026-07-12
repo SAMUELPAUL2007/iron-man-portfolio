@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useEffect } from "react";
 import { Sparkles, BookOpen, Film, Tv, Gamepad2 } from "lucide-react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { IronParticleField } from "@/components/scene/iron-particle-field";
 import { Section } from "@/components/ui/section";
 import { FadeIn } from "@/motion/primitives/fade-in";
@@ -30,7 +31,7 @@ const categoryColors = { comic: "border-l-iron-arc", film: "border-l-iron-red", 
 
 export default function TimelinePage() {
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-classic.mp4", "dark", 0.15); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-classic.mp4"), "dark", 0.15); }, [setVideo]);
   return (
     <>
       <IronParticleField count={100} />

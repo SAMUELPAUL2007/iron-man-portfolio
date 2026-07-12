@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useEffect, use } from "react";
+import { useRef, useEffect } from "react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 
 export function GlobalVideoBackground() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -13,7 +14,7 @@ export function GlobalVideoBackground() {
     const video = videoRef.current;
     if (!video) return;
     if (video.src !== src) {
-      video.src = src;
+      video.src = assetUrl(src);
       video.load();
       video.play().catch(() => {});
     }

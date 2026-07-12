@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { useEffect } from "react";
 import { ArrowRight, Zap, Shield, Cpu, Gauge, Rocket, ChevronDown } from "lucide-react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { FlyingIronMan } from "@/components/scene/flying-iron-man";
 import { HUDOverlay } from "@/components/scene/hud-overlay";
 import { IronParticleField } from "@/components/scene/iron-particle-field";
@@ -33,10 +34,10 @@ const stats = [
 ];
 
 const suits = [
-  { name: "Mark III", year: "2008", image: "/images/suits/mark3.jpg", color: "from-red-600 to-iron-gold" },
-  { name: "Mark VII", year: "2012", image: "/images/suits/iron-man-flying.jpg", color: "from-red-600 to-iron-gold" },
-  { name: "Mark XLII", year: "2013", image: "/images/suits/iron-man-urban.jpg", color: "from-iron-red to-iron-gold" },
-  { name: "Mark L", year: "2018", image: "/images/suits/mark85-charging.jpg", color: "from-iron-red via-iron-gold to-iron-blue" },
+  { name: "Mark III", year: "2008", image: assetUrl("/images/suits/mark3.jpg"), color: "from-red-600 to-iron-gold" },
+  { name: "Mark VII", year: "2012", image: assetUrl("/images/suits/iron-man-flying.jpg"), color: "from-red-600 to-iron-gold" },
+  { name: "Mark XLII", year: "2013", image: assetUrl("/images/suits/iron-man-urban.jpg"), color: "from-iron-red to-iron-gold" },
+  { name: "Mark L", year: "2018", image: assetUrl("/images/suits/mark85-charging.jpg"), color: "from-iron-red via-iron-gold to-iron-blue" },
 ];
 
 function HeroSection() {
@@ -255,7 +256,7 @@ function CTASection() {
 
 export default function HomePage() {
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-nano-tech.mp4", "ambient", 0.25); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-nano-tech.mp4"), "ambient", 0.25); }, [setVideo]);
   return (
     <>
       <HeroSection />

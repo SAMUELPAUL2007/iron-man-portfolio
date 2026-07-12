@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useEffect } from "react";
 import { Sparkles, Shield, Zap, Eye, Crosshair, Cpu, Gauge, Rocket } from "lucide-react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { HolographicGrid } from "@/components/scene/holographic-grid";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { FadeIn, StaggerFadeIn } from "@/motion/primitives/fade-in";
@@ -14,63 +15,63 @@ const armors = [
     name: "Mark I", year: "2008", movie: "Iron Man",
     description: "Built from scrap metal in a cave. Crude, heavy, and barely functional — but it started everything.",
     features: ["Flame throwers", "Crude repulsors", "Missile launcher", "Iron plating"],
-    image: "/images/suits/iron-man-battle.jpg",
+    image: assetUrl("/images/suits/iron-man-battle.jpg"),
     color: "from-gray-700 via-gray-600 to-gray-500",
   },
   {
     name: "Mark III", year: "2008", movie: "Iron Man",
     description: "The iconic red-and-gold suit. The first truly functional Iron Man armor with flight stabilizers.",
     features: ["Supersonic flight", "Advanced repulsors", "Targeting HUD", "Full weapon systems"],
-    image: "/images/suits/mark3.jpg",
+    image: assetUrl("/images/suits/mark3.jpg"),
     color: "from-red-600 via-iron-gold to-iron-gold",
   },
   {
     name: "Mark VII", year: "2012", movie: "The Avengers",
     description: "Deployable in seconds via wristbands. Enhanced for heavy combat against alien forces.",
     features: ["Rapid deployment", "Enhanced thrusters", "Shield generators", "Alien combat mode"],
-    image: "/images/suits/iron-man-flying.jpg",
+    image: assetUrl("/images/suits/iron-man-flying.jpg"),
     color: "from-red-600 via-iron-gold to-red-700",
   },
   {
     name: "Mark XLII", year: "2013", movie: "Iron Man 3",
     description: "Revolutionary prehensile suit with modular assembly. Controlled via chip implants in Tony's arm.",
     features: ["Modular assembly", "Remote control", "Self-destruct sequence", "Enhanced AI"],
-    image: "/images/suits/iron-man-urban.jpg",
+    image: assetUrl("/images/suits/iron-man-urban.jpg"),
     color: "from-iron-red via-iron-gold to-iron-red",
   },
   {
     name: "Mark XLIII", year: "2015", movie: "Avengers: Age of Ultron",
     description: "Refined design with enhanced repulsors, upgraded AI integration, and Veronica satellite support.",
     features: ["Veronica satellite", "Hulkbuster mode", "Enhanced repulsors", "AI upgrades"],
-    image: "/images/suits/iron-man-hulkbuster.jpg",
+    image: assetUrl("/images/suits/iron-man-hulkbuster.jpg"),
     color: "from-red-600 via-iron-gold to-red-500",
   },
   {
     name: "Mark XLVI", year: "2016", movie: "Captain America: Civil War",
     description: "Sleeker design optimized for combat against enhanced individuals. Features FRIDAY AI.",
     features: ["FRIDAY AI system", "Enhanced mobility", "Compact design", "Energy shielding"],
-    image: "/images/suits/iron-man-stark.jpg",
+    image: assetUrl("/images/suits/iron-man-stark.jpg"),
     color: "from-iron-red via-iron-gold to-iron-blue",
   },
   {
     name: "Mark L", year: "2018", movie: "Avengers: Infinity War",
     description: "Nanotechnology-based armor stored in the arc reactor housing. Forms instantly around Tony's body.",
     features: ["Nanotech construction", "Energy blades", "Gravity boots", "Shield formation"],
-    image: "/images/suits/mark85-charging.jpg",
+    image: assetUrl("/images/suits/mark85-charging.jpg"),
     color: "from-iron-red via-iron-gold to-iron-red",
   },
   {
     name: "Mark LXXXV", year: "2019", movie: "Avengers: Endgame",
     description: "The final armor. Enhanced nanotech with the most advanced weapon systems ever built.",
     features: ["Nano gauntlet", "Enhanced energy sword", "Shield array", "Arc overload"],
-    image: "/images/suits/mark85-power.jpg",
+    image: assetUrl("/images/suits/mark85-power.jpg"),
     color: "from-iron-red via-iron-gold to-iron-arc",
   },
 ];
 
 export default function SuitsPage() {
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-nano-tech.mp4", "red", 0.2); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-nano-tech.mp4"), "red", 0.2); }, [setVideo]);
   return (
     <>
       <HolographicGrid />

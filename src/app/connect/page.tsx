@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Send, Mail, MapPin, Phone, MessageSquare, Check } from "lucide-react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { HUDOverlay } from "@/components/scene/hud-overlay";
 import { Section } from "@/components/ui/section";
 import { FadeIn } from "@/motion/primitives/fade-in";
@@ -27,7 +28,7 @@ export default function ConnectPage() {
   }
 
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-endgame-4k.mp4", "tech", 0.18); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-endgame-4k.mp4"), "tech", 0.18); }, [setVideo]);
 
   return (
     <>

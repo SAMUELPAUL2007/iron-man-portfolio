@@ -6,11 +6,12 @@ import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { HUDOverlay } from "@/components/scene/hud-overlay";
 
 export default function NotFound() {
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-classic.mp4", "dark", 0.15); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-classic.mp4"), "dark", 0.15); }, [setVideo]);
   return (
     <>
       <HUDOverlay />

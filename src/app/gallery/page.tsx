@@ -4,24 +4,25 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import { useVideoStore } from "@/lib/video-store";
+import { assetUrl } from "@/lib/path";
 import { IronParticleField } from "@/components/scene/iron-particle-field";
 import { Section } from "@/components/ui/section";
 import { FadeIn, StaggerFadeIn } from "@/motion/primitives/fade-in";
 import { Badge } from "@/components/ui/badge";
 
 const items = [
-  { id: 1, title: "Arc Reactor", category: "Technology", image: "/images/suits/mark85-lightning.jpg" },
-  { id: 2, title: "Mark III Flight", category: "Suit", image: "/images/suits/iron-man-flying.jpg" },
-  { id: 3, title: "Avengers Assemble", category: "Team", image: "/images/suits/iron-man-thanos.jpg" },
-  { id: 4, title: "Repulsor Power", category: "Technology", image: "/images/suits/mark85-power.jpg" },
-  { id: 5, title: "Hulkbuster", category: "Suit", image: "/images/suits/iron-man-hulkbuster.jpg" },
-  { id: 6, title: "Nanotech Assembly", category: "Technology", image: "/images/suits/mark85-charging.jpg" },
-  { id: 7, title: "Endgame Battle", category: "Film", image: "/images/suits/mark85-sacrifice.jpg" },
-  { id: 8, title: "Iron Legion", category: "Team", image: "/images/suits/mark85-display.jpg" },
-  { id: 9, title: "Arc Overload", category: "Behind", image: "/images/suits/mark85-overload.jpg" },
-  { id: 10, title: "Space Rescue", category: "Film", image: "/images/suits/iron-man-space.jpg" },
-  { id: 11, title: "Mark L Helmet", category: "Suit", image: "/images/suits/mark85-mindstone.jpg" },
-  { id: 12, title: "Stark Legacy", category: "Event", image: "/images/suits/iron-man-stark.jpg" },
+  { id: 1, title: "Arc Reactor", category: "Technology", image: assetUrl("/images/suits/mark85-lightning.jpg") },
+  { id: 2, title: "Mark III Flight", category: "Suit", image: assetUrl("/images/suits/iron-man-flying.jpg") },
+  { id: 3, title: "Avengers Assemble", category: "Team", image: assetUrl("/images/suits/iron-man-thanos.jpg") },
+  { id: 4, title: "Repulsor Power", category: "Technology", image: assetUrl("/images/suits/mark85-power.jpg") },
+  { id: 5, title: "Hulkbuster", category: "Suit", image: assetUrl("/images/suits/iron-man-hulkbuster.jpg") },
+  { id: 6, title: "Nanotech Assembly", category: "Technology", image: assetUrl("/images/suits/mark85-charging.jpg") },
+  { id: 7, title: "Endgame Battle", category: "Film", image: assetUrl("/images/suits/mark85-sacrifice.jpg") },
+  { id: 8, title: "Iron Legion", category: "Team", image: assetUrl("/images/suits/mark85-display.jpg") },
+  { id: 9, title: "Arc Overload", category: "Behind", image: assetUrl("/images/suits/mark85-overload.jpg") },
+  { id: 10, title: "Space Rescue", category: "Film", image: assetUrl("/images/suits/iron-man-space.jpg") },
+  { id: 11, title: "Mark L Helmet", category: "Suit", image: assetUrl("/images/suits/mark85-mindstone.jpg") },
+  { id: 12, title: "Stark Legacy", category: "Event", image: assetUrl("/images/suits/iron-man-stark.jpg") },
 ];
 
 const categories = ["All", "Suit", "Technology", "Film", "Team", "Behind", "Event"];
@@ -39,7 +40,7 @@ export default function GalleryPage() {
   }
 
   const setVideo = useVideoStore((s) => s.setVideo);
-  useEffect(() => { setVideo("/videos/ironman-nano-tech.mp4", "ambient", 0.2); }, [setVideo]);
+  useEffect(() => { setVideo(assetUrl("/videos/ironman-nano-tech.mp4"), "ambient", 0.2); }, [setVideo]);
 
   return (
     <>
